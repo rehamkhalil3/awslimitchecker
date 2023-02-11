@@ -83,6 +83,7 @@ class _CloudTrailService(_AwsService):
                     response = self.conn.get_event_selectors(
                         TrailName=trail['TrailARN']
                     )
+                    print(TrailName)
                 except Exception as ex:
                     logger.debug(
                         'Unable to call GetEventSelectors on CloudTrail trail '
